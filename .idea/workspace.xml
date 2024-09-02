@@ -91,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1724842186106</updated>
       <workItem from="1724842187180" duration="13880000" />
-      <workItem from="1725102592228" duration="30169000" />
+      <workItem from="1725102592228" duration="32382000" />
     </task>
     <task id="LOCAL−00001" summary="Algoritmer og datastrukturer&#10;Obligatorisk Oppgave 1&#10;Høst 2024">
       <option name="closed" value="true" />
@@ -121,7 +121,14 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1725267636980</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Fjernet unnødvendig Sout operasjoner som ble satt ved debugging">
+      <option name="closed" value="true" />
+      <created>1725269466192</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1725269466192</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

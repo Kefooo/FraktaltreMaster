@@ -17,6 +17,9 @@ import javafx.stage.Stage;
  * Obligatorisk oppgave - Fraktaltre - Algoritmer og datastrukturer 6124-1 24H
  * FraktaltreTo er en JavaFX-applikasjon som tegner et fraktalt tre på et canvas.
  * Brukeren kan justere treets egenskaper via sliders (Vinkel, Lengde og Reduksjon) og knapper (Opprett og Reset Verdi).
+ *
+ * @author Kevin Matarewicz
+ * @author Abdallah Ndikumana
  */
 public class fraktaltreTo extends Application {
 
