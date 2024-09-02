@@ -20,33 +20,31 @@ import javafx.stage.Stage;
  */
 public class fraktaltreTo extends Application {
 
-    // Konstantverdier for vinduets størrelse, treets egenskaper og grafikk
     private static final int VINDU_BREDDE = 800; // Bredde på Applikasjons-vinduet
     private static final int VINDU_HØYDE = 600; // Høyde på Applikasjons-vinduet
     private static final double FØRSTE_LENGDE = 150.0; // Default verdi på første lengde
-    private static final double GREIN_REDUKSJON = 0.7; //
+    private static final double GREIN_REDUKSJON = 0.7; // Reduksjon av neste grein
     private static final double REKURSJON_STOPP = 2.0; // Minimum lengde på greiner før rekursjon stopper
     private static final double VINKEL_DEAULT = 30.0; // Standard vinkel på greiner
     private static final double TILFELDIGHET_DEFAULT = 0.2; // Standard tilfeldighetsverdi
     private static final double KANT_BREDDE = 2; // Bredde på kantlinjen rundt canvas
     private static final double STOPP_AVSTAND = 10; // Minimum avstand til kanten for å stoppe rekursjonen
     private static final int RUTE_STØRRELSE = 10; // Størrelse på rutene i grafikken
-    private static final int MIN_DYPDE = 1;
+    private static final int MIN_DYPDE = 1; // Minste antall rekursive repetisjoner
     private static int MAX_DYPDE = 10; // Maksimalt antall rekursive repetisjoner (For å unngå stackoverflow)
 
     private Slider vinkelSlider; // Brukegrensesnitt Slider for Vinkel av greinene
     private Slider lengdeSlider; // Brukegrensesnitt Slider for Lengde av greinene
-    private Slider reduksjonSlider; //
-    private Button randomButton;
-    private Button resetButton;
-    private Label greinTellerLabel;
-    private int antallGreiner = 0;
-    private double randomness = TILFELDIGHET_DEFAULT;
+    private Slider reduksjonSlider; // Bruekrgrensesnitt Slider for Reduksjonsvariabel for greinene
+    private Button randomButton; // Knapp for opprettelse av Treet
+    private Button resetButton; // Knapp for å resette innstillingene til default
+    private Label greinTellerLabel; // Label for telling av antall rekursjoner/greiner
+    private int antallGreiner = 0; // Teller for antall rekursjoner/greiner
+    private double randomness = TILFELDIGHET_DEFAULT; // Variabel for tilfeldighetsfaktor i kalkulasjon av verdier
 
     public static void main(String[] args) {
         launch(args);
     }
-
     /**
      * Startmetoden er inngangspunktet for JavaFX-applikasjonen og initialiserer brukergrensesnittet for fraktaltre-programmet.
      * Den setter opp hovedvinduet, kontrollene (sliders og knapper), og tegneområdet (canvas) der fraktaltreet vil bli tegnet.
@@ -70,7 +68,7 @@ public class fraktaltreTo extends Application {
         randomButton = new Button("Opprett");
         randomButton.setOnAction(e -> {
             randomness = Math.random();
-            treeStamme(gc); // Tegn treet på nytt med ny tilfeldighetsverdi
+            treeStamme(gc); // Tegn treet på nytt med nye tilfeldighetsverdier
         });
 
         // Resetter verdiene på rekursjon tegning av tree og oppretter et nytt tre med default innstillinger
@@ -84,7 +82,7 @@ public class fraktaltreTo extends Application {
             dybdeChoiceBox.getItems().add(i);
         }
         MAX_DYPDE = tilfeldigDybde(); // Lager en tilfeldig dybdeverdi
-        dybdeChoiceBox.setValue(MAX_DYPDE); // Bruker standardverdi
+        dybdeChoiceBox.setValue(MAX_DYPDE); // Setter dybdeverdien som blir brutk visuelt i ChoiceBox
         dybdeChoiceBox.setOnAction(e -> {
             MAX_DYPDE = dybdeChoiceBox.getValue();
             treeStamme(gc);
@@ -157,7 +155,7 @@ public class fraktaltreTo extends Application {
         Slider slider = new Slider(min, max, initial);
         slider.setPrefWidth(150);
 
-        // Ticks for visuell brukergrensesnitt av sliderene
+        // Ticks/Markering for visuell brukergrensesnitt av sliderene
         slider.setShowTickMarks(true);
         slider.setShowTickLabels(true);
         slider.setMajorTickUnit((max - min) / 10);
@@ -269,8 +267,6 @@ public class fraktaltreTo extends Application {
      * @param depth        Gjeldende rekursive dybde.
      */
     private void greinRekursjon(GraphicsContext gc, double x, double y, double vinkel, double lengde, double greinVinkel, double nivåer, double minsteStr, double randomness, int depth) {
-        System.out.println(String.format("Tegner greiner fra (%.2f, %.2f) med lengde %.2f, vinkel %.2f, dybde %d", x, y, lengde, vinkel, depth));
-
         // Sjekker om maksimal rekursjonsdybde er nådd (Løsning mot stackoverflow).
         if (depth > MAX_DYPDE) {
             System.out.println("Maksimal dybde nådd. Stopper rekursjonen.");
