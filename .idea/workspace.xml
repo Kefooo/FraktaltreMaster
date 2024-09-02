@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b6c0ebd-9c84-4baf-8a05-d13a21d3b37b" name="Changes" comment="Algoritmer og datastrukturer&#10;Obligatorisk Oppgave 1&#10;Høst 2024">
+    <list default="true" id="9b6c0ebd-9c84-4baf-8a05-d13a21d3b37b" name="Changes" comment="Fjernet unnødvendig Sout operasjoner som ble satt ved debugging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fraktaltremaster/fraktaltreTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fraktaltremaster/fraktaltreTo.java" afterDir="false" />
     </list>
@@ -91,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1724842186106</updated>
       <workItem from="1724842187180" duration="13880000" />
-      <workItem from="1725102592228" duration="28060000" />
+      <workItem from="1725102592228" duration="30169000" />
     </task>
     <task id="LOCAL−00001" summary="Algoritmer og datastrukturer&#10;Obligatorisk Oppgave 1&#10;Høst 2024">
       <option name="closed" value="true" />
@@ -107,7 +107,21 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1725266207791</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="Fjernet unnødvendig Sout operasjoner som ble satt ved debugging">
+      <option name="closed" value="true" />
+      <created>1725267369161</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1725267369161</updated>
+    </task>
+    <task id="LOCAL−00004" summary="Fjernet unnødvendig Sout operasjoner som ble satt ved debugging">
+      <option name="closed" value="true" />
+      <created>1725267636980</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1725267636980</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +129,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Algoritmer og datastrukturer&#10;Obligatorisk Oppgave 1&#10;Høst 2024" />
-    <option name="LAST_COMMIT_MESSAGE" value="Algoritmer og datastrukturer&#10;Obligatorisk Oppgave 1&#10;Høst 2024" />
+    <MESSAGE value="Fjernet unnødvendig Sout operasjoner som ble satt ved debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fjernet unnødvendig Sout operasjoner som ble satt ved debugging" />
   </component>
 </project>
