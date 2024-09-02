@@ -302,7 +302,7 @@ public class fraktaltreTo extends Application {
 
         // Math.random genererer random tall mellom 0.0 og 1.0. (Inklusiv og eksklusiv).
         // Deretter (Math.random() * 2 - 1) Som gjør at tallet oppnår et område mellom -1.0 og 1.0.
-        // Randomness er variabel for hvor tilfeldig variasjonene kan bli.
+        // Randomness er variabel for hvor tilfeldig variasjonene kan bli.|
         // greinVinkel har default vinekl som skal varieres.
         // lengde har defautl lengde som skal varieres.
         double vinkelVariasjon = (Math.random() * 2 - 1) * randomness * greinVinkel;
