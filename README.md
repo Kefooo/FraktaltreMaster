@@ -2,8 +2,9 @@ Algoritmer og datastrukturer
 Obligatorisk Oppgave 1
 Høst 2024 
 
-Laget av 
+Laget av:
 Kevin Matarewicz
+&
 Abdallah Amidu Ndikumana
 
 Applikasjons krav: 
@@ -16,3 +17,10 @@ Lag ein applikasjon med grafisk grensesnitt slik at brukar interaktivt kan styre
 I staden for at treet er perfekt, alle greiner sit på plass presis der ein forventar dei (som i figuren over), skal du legge inn litt tilfeldig avvik (random) i vinklar, lengder, og om ei grein i det heile er der:
 if (random...) grein( ....);
 Dei nederste, største greinene bør ganske sikkert vera på plass, dei minste ytterst kan gjerne mangle. La brukar interaktivt styre ein eller fleire parametre som bestemmer grad av random, frå at alt er på rett plass, til at det er stor variasjon.
+
+![LiteTre](https://github.com/Kefooo/FraktaltreMaster/blob/master/src/main/java/com/example/fraktaltremaster/LiteTre.png)
+![StortTre](https://github.com/Kefooo/FraktaltreMaster/blob/master/src/main/java/com/example/fraktaltremaster/StortTre.png)
+![VinkelTre](https://github.com/Kefooo/FraktaltreMaster/blob/master/src/main/java/com/example/fraktaltremaster/VinkelTre.png)
+
+
+
