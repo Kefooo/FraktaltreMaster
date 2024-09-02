@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b6c0ebd-9c84-4baf-8a05-d13a21d3b37b" name="Changes" comment="Fjernet unnødvendig Sout operasjoner som ble satt ved debugging">
+    <list default="true" id="9b6c0ebd-9c84-4baf-8a05-d13a21d3b37b" name="Changes" comment="La til @Author av applikasjonens utviklere">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fraktaltremaster/fraktaltreTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fraktaltremaster/fraktaltreTo.java" afterDir="false" />
     </list>
@@ -91,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1724842186106</updated>
       <workItem from="1724842187180" duration="13880000" />
-      <workItem from="1725102592228" duration="32382000" />
+      <workItem from="1725102592228" duration="34363000" />
     </task>
     <task id="LOCAL−00001" summary="Algoritmer og datastrukturer&#10;Obligatorisk Oppgave 1&#10;Høst 2024">
       <option name="closed" value="true" />
@@ -128,7 +128,14 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1725269466192</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="La til @Author av applikasjonens utviklere">
+      <option name="closed" value="true" />
+      <created>1725271975231</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1725271975231</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +144,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Algoritmer og datastrukturer&#10;Obligatorisk Oppgave 1&#10;Høst 2024" />
     <MESSAGE value="Fjernet unnødvendig Sout operasjoner som ble satt ved debugging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fjernet unnødvendig Sout operasjoner som ble satt ved debugging" />
+    <MESSAGE value="La til @Author av applikasjonens utviklere" />
+    <option name="LAST_COMMIT_MESSAGE" value="La til @Author av applikasjonens utviklere" />
   </component>
 </project>

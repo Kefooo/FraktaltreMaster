@@ -13,6 +13,8 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import javax.crypto.MacSpi;
+
 /**
  * Obligatorisk oppgave - Fraktaltre - Algoritmer og datastrukturer 6124-1 24H
  * FraktaltreTo er en JavaFX-applikasjon som tegner et fraktalt tre på et canvas.
@@ -81,7 +83,7 @@ public class fraktaltreTo extends Application {
         // En ChoiceBox for å kunne endre rekursjonsDybden.
         // Begrensent tall for å unngå stackoverflow.
         ChoiceBox<Integer> dybdeChoiceBox = new ChoiceBox<>();
-        for (int i = MIN_DYPDE; i <= 15; i++) {
+        for (int i = MIN_DYPDE; i <= 25; i++) {
             dybdeChoiceBox.getItems().add(i);
         }
         MAX_DYPDE = tilfeldigDybde(); // Lager en tilfeldig dybdeverdi
@@ -108,7 +110,7 @@ public class fraktaltreTo extends Application {
         VBox brukergrensesnitt = new VBox(
                 lagSliderLabel(vinkelSlider, "Vinkel på greiner:"),
                 lagSliderLabel(lengdeSlider, "Lengde på greiner:"),
-                lagSliderLabel(reduksjonSlider, "Nivåfaktor:"),
+                lagSliderLabel(reduksjonSlider, "Skaleringsfaktor:"),
                 randomButton,
                 resetButton,
                 dybdeChoiceBox,
@@ -263,13 +265,13 @@ public class fraktaltreTo extends Application {
      * @param vinkel       Vinkelen som greinen strekker seg i.
      * @param lengde       Lengden på greinen.
      * @param greinVinkel  Vinkelen mellom hovedgreinen og sidegreinene.
-     * @param nivåer       Reduksjonsfaktoren for hver nye grein.
+     * @param skalering       Reduksjonsfaktoren for hver nye grein.
      * @param minsteStr    Minimum lengde for en grein før rekursjonen stopper.
      * @param randomness   Tilfeldighetsfaktor for variasjon i greinvinkler og
      *                     lengder.
      * @param depth        Gjeldende rekursive dybde.
      */
-    private void greinRekursjon(GraphicsContext gc, double x, double y, double vinkel, double lengde, double greinVinkel, double nivåer, double minsteStr, double randomness, int depth) {
+    private void greinRekursjon(GraphicsContext gc, double x, double y, double vinkel, double lengde, double greinVinkel, double skalering, double minsteStr, double randomness, int depth) {
         // Sjekker om maksimal rekursjonsdybde er nådd (Løsning mot stackoverflow).
         if (depth > MAX_DYPDE) {
             return;
@@ -296,11 +298,11 @@ public class fraktaltreTo extends Application {
         gc.strokeLine(x, y, xEnd, yEnd);
         antallGreiner++;
 
-        // Beregner nye verdier for neste nivå av greiner
+        // Beregner nye verdier for neste skalering av greiner
         // Litt matematisk kalkulasjon for "Random" verdier
 
-        // Eksempel: (Lengde) 50 * (Nivåer) 0.5 = (nyLengde) 25
-        double nyLengde = lengde * nivåer;
+        // Eksempel: (Lengde) 50 * (Skalering) 0.5 = (nyLengde) 25
+        double nyLengde = lengde * skalering;
 
         // Math.random genererer random tall mellom 0.0 og 1.0. (Inklusiv og eksklusiv).
         // Deretter (Math.random() * 2 - 1) Som gjør at tallet oppnår et område mellom -1.0 og 1.0.
@@ -311,8 +313,8 @@ public class fraktaltreTo extends Application {
         double lengdeVariasjon = (Math.random() * 2 - 1) * randomness * lengde;
 
         // Tegner de to nye greinene med justert vinkel og lengde utifra rekursjonen
-        greinRekursjon(gc, xEnd, yEnd, vinkel + greinVinkel + vinkelVariasjon, nyLengde + lengdeVariasjon, greinVinkel, nivåer, minsteStr, randomness, depth + 1);
-        greinRekursjon(gc, xEnd, yEnd, vinkel - greinVinkel - vinkelVariasjon, nyLengde + lengdeVariasjon, greinVinkel, nivåer, minsteStr, randomness, depth + 1);
+        greinRekursjon(gc, xEnd, yEnd, vinkel + greinVinkel + vinkelVariasjon, nyLengde + lengdeVariasjon, greinVinkel, skalering, minsteStr, randomness, depth + 1);
+        greinRekursjon(gc, xEnd, yEnd, vinkel - greinVinkel - vinkelVariasjon, nyLengde + lengdeVariasjon, greinVinkel, skalering, minsteStr, randomness, depth + 1);
     }
 
     /**
