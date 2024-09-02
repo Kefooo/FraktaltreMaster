@@ -13,8 +13,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-import javax.crypto.MacSpi;
-
 /**
  * Obligatorisk oppgave - Fraktaltre - Algoritmer og datastrukturer 6124-1 24H
  * FraktaltreTo er en JavaFX-applikasjon som tegner et fraktalt tre på et canvas.
@@ -134,15 +132,12 @@ public class fraktaltreTo extends Application {
         // Bruker en addListner observableValue for å sjekke verdi-endring på de ulike sliderene
         // Dersom det er en endringer opprettes treet på nytt med nye verdier
         vinkelSlider.valueProperty().addListener((observableValue, gammelVerdi, nyVerdi) -> {
-            System.out.println("Vinkel slider endret: " + nyVerdi);
             treeStamme(gc);
         });
         lengdeSlider.valueProperty().addListener((obs, gammelVerdi, nyVerdi) -> {
-            System.out.println("Lengde slider endret: " + nyVerdi);
             treeStamme(gc);
         });
         reduksjonSlider.valueProperty().addListener((obs, gammelVerdi, nyVerdi) -> {
-            System.out.println("Reduksjon slider endret: " + nyVerdi);
             treeStamme(gc);
         });
     }
@@ -265,7 +260,7 @@ public class fraktaltreTo extends Application {
      * @param vinkel       Vinkelen som greinen strekker seg i.
      * @param lengde       Lengden på greinen.
      * @param greinVinkel  Vinkelen mellom hovedgreinen og sidegreinene.
-     * @param skalering       Reduksjonsfaktoren for hver nye grein.
+     * @param skalering    Reduksjonsfaktoren for hver nye grein.
      * @param minsteStr    Minimum lengde for en grein før rekursjonen stopper.
      * @param randomness   Tilfeldighetsfaktor for variasjon i greinvinkler og
      *                     lengder.
@@ -279,7 +274,6 @@ public class fraktaltreTo extends Application {
 
         // Sjekker om lengden på greinene er under minimumsgrensen (2 pixler).
         if (lengde < minsteStr) {
-            System.out.println(String.format("Rekursjon stopper: Lengden på greinen (%.2f piksler) er mindre enn minimum lengde (%.2f piksler).", lengde, minsteStr));
             return;
         }
 
@@ -290,7 +284,6 @@ public class fraktaltreTo extends Application {
 
         // Sjekker om greinen nærmer seg kanten/border av canvasen
         if (kantSjekk(x, y, xEnd, yEnd)) {
-            System.out.println(String.format("Rekursjon stopper: Greinen nærmer seg kanten av canvasen: fra (%.2f, %.2f) til (%.2f, %.2f).", x, y, xEnd, yEnd));
             return;
         }
 
@@ -332,14 +325,12 @@ public class fraktaltreTo extends Application {
         double kantVenstre = x1;
         double kantHoyre = VINDU_BREDDE - x2;
         boolean isNear = Math.min(Math.min(kantTop, kantBunn), Math.min(kantVenstre, kantHoyre)) < STOPP_AVSTAND;
-        if (isNear) {
-            System.out.println("Linje nær kant: fra (" + x1 + ", " + y1 + ") til (" + x2 + ", " + y2 + ")");
-        }
+
         return isNear;
     }
 
     // Generer en tilfeldig verdi mellom 1 og 15
     private int tilfeldigDybde() {
-        return (int) (Math.random() * (15 - 1 + 1)) + 1;
+        return (int) (Math.random() * (25 - 1 + 1)) + 1;
     }
 }
