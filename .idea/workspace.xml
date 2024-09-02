@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b6c0ebd-9c84-4baf-8a05-d13a21d3b37b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fraktaltremaster/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fraktaltremaster/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/fraktaltremaster/hello-view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="9b6c0ebd-9c84-4baf-8a05-d13a21d3b37b" name="Changes" comment="Algoritmer og datastrukturer&#10;Obligatorisk Oppgave 1&#10;Høst 2024" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +20,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Kefooo/Fraktaltretest.git",
+    "accountId": "5ed088e3-2824-4e59-b8f2-542d761ac236"
+  }
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -91,11 +82,23 @@
       <option name="presentableId" value="Default" />
       <updated>1724842186106</updated>
       <workItem from="1724842187180" duration="13880000" />
-      <workItem from="1725102592228" duration="26558000" />
+      <workItem from="1725102592228" duration="26906000" />
     </task>
+    <task id="LOCAL−00001" summary="Algoritmer og datastrukturer&#10;Obligatorisk Oppgave 1&#10;Høst 2024">
+      <option name="closed" value="true" />
+      <created>1725266084759</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1725266084759</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Algoritmer og datastrukturer&#10;Obligatorisk Oppgave 1&#10;Høst 2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="Algoritmer og datastrukturer&#10;Obligatorisk Oppgave 1&#10;Høst 2024" />
   </component>
 </project>
