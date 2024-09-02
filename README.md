@@ -18,9 +18,9 @@ I staden for at treet er perfekt, alle greiner sit på plass presis der ein forv
 if (random...) grein( ....);
 Dei nederste, største greinene bør ganske sikkert vera på plass, dei minste ytterst kan gjerne mangle. La brukar interaktivt styre ein eller fleire parametre som bestemmer grad av random, frå at alt er på rett plass, til at det er stor variasjon.
 
-![alt text](https://github.com/Kefooo/FraktaltreMaster/blob/master/src/main/java/com/example/fraktaltremaster/LiteTre.png)
-![alt text](https://github.com/Kefooo/FraktaltreMaster/blob/master/src/main/java/com/example/fraktaltremaster/StortTre.png)
-![alt text](https://github.com/Kefooo/FraktaltreMaster/blob/master/src/main/java/com/example/fraktaltremaster/VinkelTre.png)
+![LiteTre](https://github.com/Kefooo/FraktaltreMaster/blob/master/src/main/java/com/example/fraktaltremaster/LiteTre.png)
+![StortTre](https://github.com/Kefooo/FraktaltreMaster/blob/master/src/main/java/com/example/fraktaltremaster/StortTre.png)
+![VinkelTre](https://github.com/Kefooo/FraktaltreMaster/blob/master/src/main/java/com/example/fraktaltremaster/VinkelTre.png)
 
 
 
